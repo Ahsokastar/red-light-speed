@@ -95,7 +95,7 @@ for month in months:
 st.sidebar.title('Navigation')
 options = st.sidebar.radio("Go to", ["Map", "Stats"])
 if options == "Map":
-    m = folium.Map(location=(41.8781, -87.6298))
+    m = folium.Map(location=(41.8781, -87.6298), tiles = 'https://tile.openstreetmap.org/{z}/{x}/{y}.png', attr = 'open-street-map')
     for _, location in red_location.iterrows():
     
         folium.Marker(location = [location['LATITUDE'], location['LONGITUDE']], popup = location['INTERSECTION'], icon=folium.Icon(color = 'red', icon = 'dot')).add_to(m)
