@@ -88,7 +88,7 @@ for month in months:
 #print(red_light_count)
 
 
-#m = folium.Map(location=(41.8781, -87.6298), tiles = 'https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png', attr = 'mine')
+#m = folium.Map(location=(41.8781, -87.6298))
 
 
 
