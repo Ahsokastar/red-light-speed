@@ -12,6 +12,12 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state="expanded",
 )
+if 'kaggle' in st.secrets:
+    os.environ['KAGGLE_USERNAME'] = st.secrets["kaggle"]["username"]
+    os.environ['KAGGLE_KEY'] = st.secrets["kaggle"]["key"]
+else:
+    st.error("Kaggle credentials not found. Please set them in Streamlit secrets.")
+    st.stop()
 @st.cache_data
 def data_load():
     
@@ -21,7 +27,7 @@ def data_load():
     api.authenticate()
 
    
-    dataset_identifier = 'chicago-red-light-and-speed-camera-data'  
+    dataset_identifier = 'catherinetodd123/chicago-red-light-and-speed-camera-data'  
 
    
     DATA_DIR = 'data'
