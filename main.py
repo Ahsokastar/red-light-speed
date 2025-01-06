@@ -21,7 +21,7 @@ def data_load():
     api.authenticate()
 
    
-    dataset_identifier = 'catherinetodd123/chicago-red-light-and-speed-camera-data'  
+    dataset_identifier = 'chicago-red-light-and-speed-camera-data'  
 
    
     DATA_DIR = 'data'
